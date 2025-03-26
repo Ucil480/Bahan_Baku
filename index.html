@@ -3,38 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Sheet Viewer</title>
+    <title>Bahan Baku</title>
     <style>
         body {
             margin: 0;
+            padding: 0;
             overflow: hidden;
         }
         .container {
-            position: relative;
             width: 100vw;
             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
-        iframe {
+        .iframe-container {
+            width: 90%;
+            height: 90%;
+            overflow: auto;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+        .iframe-container iframe {
             width: 100%;
             height: 100%;
             border: none;
-        }
-        .freeze-header {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 40px; /* Atur tinggi header */
-            background: white;
-            z-index: 1000;
-            border-bottom: 2px solid black;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="freeze-header">Bahan Baku - Data</div>
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKXd1S7pNkvtXzlQ7izLf9F3B5FiuJwKjG_hL5vEF7PLUnR3iFHjkAnmJ3zyTTVWEMj4IjXNGiFqkR/pubhtml?widget=true&headers=false"></iframe>
+        <div class="iframe-container">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKXd1S7pNkvtXzlQ7izLf9F3B5FiuJwKjG_hL5vEF7PLUnR3iFHjkAnmJ3zyTTVWEMj4IjXNGiFqkR/pubhtml?widget=true&headers=false"></iframe>
+        </div>
     </div>
 </body>
 </html>
